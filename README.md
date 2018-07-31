@@ -1,11 +1,12 @@
 # fcitx-mozc RPM builder for Fedora
 
-A Dockerfile and a SPEC file to build fcitx-mozc RPM package on Fedora.
+A Dockerfile and a SPEC file to build fcitx-mozc RPM package on Fedora 27 or 28.
 
 ### Building RPM package
 1. Building a docker image.
  
 ```
+$ cd Fedora/*version* 
 $ docker build -t fcitx-mozc-builder  .
 ```
 
@@ -26,15 +27,5 @@ $ docker cp fcitx-mozc:/root/rpmbuild /var/tmp/
 ```
 $ docker rm fcitx-mozc
 $ docker rmi fcitx-mozc-builder
-```
-
-### Notes 
-
-If you want to have the RPM package on another Fedora version, you just
-modify the first line in the Dockerfile. For example, if you want a RPM
-package for Fedora 26, modify the Dockerfile as follows:
-
-```
-FROM fedora:26
 ```
 
