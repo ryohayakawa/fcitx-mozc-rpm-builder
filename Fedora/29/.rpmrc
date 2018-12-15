@@ -1,0 +1,1 @@
+optflags: x86_64 %{__global_compiler_flags} -m64 -mtune=generic -fasynchronous-unwind-tables
